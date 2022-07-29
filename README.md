@@ -10,6 +10,8 @@ A house price prediction tool for predicting house prices from existing data usi
 
 This project originated from a course exercise and developing that into further to create a useful program that uses artificial intelligence methods. The goal is to learn how to use the tools in practical real life situations.
 
+The program uses data from a csv file as the learning data. In the file each line represents data for one house.
+
 Example data found in the code and csv-file have been found from a property selling website during august 2022. They are shown here only for example purposes.
 
 ## How is it used?
