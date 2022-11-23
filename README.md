@@ -16,13 +16,15 @@ Example data found in the code and csv-file have been found from a property sell
 
 ## How is it used?
 
-Before running the program you have to install required libraries. You can find the requirements in requirements-file or install with ``pip install -r requirements.txt``.
+Before running the program you have to install required libraries. You can find the requirements in requirements-file or install with ``pip install -r requirements.txt``. To install all requirements including development requirements use command ``pip install -r requirements-dev.txt``.
 
 You can run the program on command line with ``python house_price_prediction_tool.py`` from the project's main directory.
 
 ## What next?
 
 Develop the program further and add more features to it.
+* Get data automatically from the internet.
+* Use a database instead of a csv-file.
 
 ## Acknowledgments
 
