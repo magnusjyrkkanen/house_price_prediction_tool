@@ -1,3 +1,4 @@
 # Requirements for House price prediction tool -project.
 
 numpy
+selenium
