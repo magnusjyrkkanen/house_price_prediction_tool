@@ -20,7 +20,7 @@ Example data found in the code and csv-file have been found from a property sell
 
 ### Second version
 
-The second version of the program will be the future development of the program.
+The second version of the program will be the future development of the program In the second version the main goal is to fetch data from the internet to use for the prediction tool's learning phase.
 
 ## How is it used?
 
@@ -31,7 +31,7 @@ You can run the program on command line with ``python house_price_prediction_too
 ## What next?
 
 Develop the program further and add more features to it.
-* Get data automatically from the internet using Robot Framework.
+* Get data automatically from the internet using robotic process automation.
 * Use a database instead of a csv-file.
 
 ## Acknowledgments

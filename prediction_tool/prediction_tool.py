@@ -3,7 +3,7 @@ import numpy as np
 
 def prediction_tool(input_file, example_test_data):
     """Main function for the tool that prepares the data."""
-    print("Welcome to the house price prediction tool!")
+    print("Welcome to the prediction tool!")
     # Ask user if they want to give data to use (for one or more houses) or use example test data.
     print("Do you want to give data for a house to use or use example test data?")
 
