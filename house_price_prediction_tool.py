@@ -9,8 +9,10 @@ example_test_data = [
     [138, 1998, 1841],
     [137, 1986, 1156]
     ]
-# Websites to fetch data from.
-websites = []
+# Websites to fetch data from. Website name - url pairs.
+websites = {
+    "Etuovi": "https://www.etuovi.com/"
+}
 
 
 def house_price_prediction_tool(input_file, example_test_data):
@@ -25,7 +27,10 @@ def house_price_prediction_tool(input_file, example_test_data):
             case 2:
                 data_fetcher(websites)
             case 3:
+                print("Bye!")
                 no_exit = False
+            case other:
+                continue
 
 
 def option_input():
