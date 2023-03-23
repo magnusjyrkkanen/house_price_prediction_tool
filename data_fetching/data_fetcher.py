@@ -7,15 +7,18 @@ from time import sleep
 def data_fetcher(websites: dict):
     """Main function for the data fetching process."""
 
+    location = "Rautalampi"
+    type = "omakotitalo"
+
     for website in websites.keys():
         match website:
             case "Etuovi":
-                fetch_data_etuovi(websites[website])
+                fetch_data_etuovi(websites[website], location, type)
             case other:
                 print(f"Unkown website {website} - {websites[website]}")
 
 
-def fetch_data_etuovi(url: str):
+def fetch_data_etuovi(url: str, location: str, type: str):
     """Fetch data from Etuovi."""
 
     # Start Selenium session.

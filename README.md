@@ -24,7 +24,13 @@ The second version of the program will be the future development of the program 
 
 ## How is it used?
 
+### Requirements
+
+Requires Python 3.10. Program uses structural pattern matching that was introduced in Python 3.10. 
+
 Before running the program you have to install required libraries. You can find the requirements in requirements-file or install with ``pip install -r requirements.txt``. To install all requirements including development requirements use command ``pip install -r requirements-dev.txt``. Additionally Selenium requires a browser driver for the browser it uses. In this learning project Chrome is used.
+
+### Usage
 
 You can run the program on command line with ``python house_price_prediction_tool.py`` from the project's main directory. The program asks for data to use in the prediction. Choose the option you want to use.
 
@@ -33,9 +39,10 @@ You can run the program on command line with ``python house_price_prediction_too
 Develop the program further and add more features to it.
 * Get data automatically from the internet using robotic process automation.
 * Use a database instead of a csv-file.
+* Return prediction results as a graph.
 
 ## Acknowledgments
 
 * Original inspiration from exercises in the Building AI -course.
-* Scraped data from websites used only for example purposes and personal use and is not stored.
+* Scraped data from websites used only for personal learning purposes and is stored only for that use.
 * Do not use code, images, data etc. from others without permission.
