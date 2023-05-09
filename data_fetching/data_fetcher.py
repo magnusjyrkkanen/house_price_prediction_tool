@@ -52,18 +52,21 @@ def fetch_data_etuovi(url: str, location: str, type: str, year_month_day):
         ActionChains(driver).scroll_by_amount(0, delta_y).perform()
         type_box.click()
 
-        type_select = driver.find_element(by=By.XPATH, value='//*[@id="menu-residentialType"]/div[3]/ul/li[4]')
+        # type_select = driver.find_element(by=By.XPATH, value='//*[@id="menu-residentialType"]/div[3]/ul/li[4]')
+        type_select = WebDriverWait(driver, timeout=3).until(
+            lambda d: d.find_element(by=By.XPATH, value='//*[@id="menu-residentialType"]/div[3]/ul/li[4]'))
         ActionChains(driver).scroll_to_element(type_select).perform()
         type_select.click()
         ActionChains(driver).key_down(Keys.TAB).perform()
 
         # Input search terms and click search.
-        location_box = driver.find_element(by=By.ID, value=":R5kopkp6mn:")
+        # location_box = driver.find_element(by=By.ID, value=":R5kopkp6mn:")
+        location_box = driver.find_element(by=By.ID, value=":r2:")
         # search_box = driver.find_element(by=By.ID, value=":rv:")
         location_box.send_keys(location)
         ActionChains(driver).key_down(Keys.ENTER).perform()
         search_button = driver.find_element(
-            by=By.XPATH, value='//*[@id="frontpage"]/div[1]/div/div[2]/div/form/div/div[1]/div[3]/button')
+            by=By.XPATH, value='//*[@id="frontpage"]/div[1]/div/div[2]/div/div[2]/form/div/div[1]/div[3]')
         ActionChains(driver).scroll_to_element(search_button).perform()
         WebDriverWait(driver, timeout=3).until(element_to_be_clickable(search_button))
         search_button.click()
@@ -83,11 +86,11 @@ def fetch_data_etuovi(url: str, location: str, type: str, year_month_day):
     except ElementClickInterceptedException as ex:
         # Print the exception and take a screenshot from the situation.
         print(ex)
-        driver.save_screenshot(f"./data_fetching/exception_click.png")
+        driver.save_screenshot(f"./data_fetching/exception_click_{year_month_day}.png")
     except NoSuchElementException as ex:
         # Print the exception and take a screenshot from the situation.
         print(ex)
-        driver.save_screenshot(f"./data_fetching/exception_element.png")
+        driver.save_screenshot(f"./data_fetching/exception_element_{year_month_day}.png")
     finally:
         # Close browser.
         driver.quit()
